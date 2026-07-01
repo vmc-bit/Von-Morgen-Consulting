@@ -1,0 +1,6 @@
+{
+  "name": "Von Morgen Consulting",
+  "description": "Erleben Sie die Zukunft schon heute. Ihr unabhängiger Premium-Dienstleister für Photovoltaik, Wärmepumpen, Strom- & Gasoptimierung sowie Immobilien in München und ganz Deutschland. Schwarz-Gold Champion-Qualität.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

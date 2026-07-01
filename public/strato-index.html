@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Suchmaschinen-Optimierung (SEO) -->
+    <title>VON MORGEN. | Unabhängiger Energiebroker & Premium-Immobilien</title>
+    <meta name="description" content="Ihr herstellerunabhängiger Premium-Partner für Photovoltaik, hocheffiziente Wärmepumpen, exklusive Strom- & Gas-Sonderkonditionen und wertsteigernde Immobilienvermittlung." />
+    <meta name="keywords" content="Von Morgen Consulting, Energiebroker München, Photovoltaik Beratung, Wärmepumpe Förderung, Strom Gas Tarifoptimierung, Immobilienmakler München, Edi Kaguri, Elvin Kaguri, KfW Förderung 2026, Solaranlage kaufen" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.von-morgen-consulting.de/" />
+
+    <!-- Google Fonts Header -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#d5b265',
+                            light: '#ebd6ab',
+                            dark: '#7d6132',
+                            bright: '#f7f1e5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'Times New Roman', 'Georgia', 'serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Premium Styles -->
+    <style>
+        body {
+            background-color: #040405;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Gold text gradient */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f7f1e5 0%, #ebd6ab 30%, #d5b265 55%, #7d6132 85%, #ebd6ab 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Gold borders and glow */
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(213, 178, 101, 0.08);
+        }
+        .gold-glow-hover:hover {
+            box-shadow: 0 0 30px rgba(213, 178, 101, 0.2);
+            border-color: #d5b265;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020203;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #18181b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d5b265;
+        }
+
+        /* Custom inputs styling */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #1c1917;
+            border-radius: 0;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #d5b265;
+            border: 2px solid #000;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.28);
+            background: #ebd6ab;
+            box-shadow: 0 0 12px rgba(213, 178, 101, 0.5);
+        }
+        
+        /* Glassmorphism elements */
+        .glass-panel {
+            background: rgba(10, 10, 12, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Scroll Reveal and Premium Micro-Animations */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Delay modifiers for staggered load-ins */
+        .reveal-delay-100 { transition-delay: 100ms; }
+        .reveal-delay-200 { transition-delay: 200ms; }
+        .reveal-delay-300 { transition-delay: 300ms; }
+        .reveal-delay-400 { transition-delay: 400ms; }
+        .reveal-delay-500 { transition-delay: 500ms; }
+
+        /* Slow ambient pulse for golden grids and items */
+        @keyframes subtle-pulse {
+            0%, 100% { opacity: 0.35; transform: scale(1); }
+            50% { opacity: 0.55; transform: scale(1.02); }
+        }
+        .animate-subtle-pulse {
+            animation: subtle-pulse 10s ease-in-out infinite;
+        }
+
+        /* Continuous golden shimmer on borders on hover */
+        @keyframes golden-shimmer {
+            0% { border-color: rgba(213, 178, 101, 0.2); }
+            50% { border-color: rgba(213, 178, 101, 0.6); }
+            100% { border-color: rgba(213, 178, 101, 0.2); }
+        }
+        .premium-hover-shimmer:hover {
+            animation: golden-shimmer 2s ease-in-out infinite;
+        }
+
+        /* Slide scale animation for widgets */
+        .bounce-premium {
+            animation: bounce-subtle 4s ease-in-out infinite;
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body class="selection:bg-gold selection:text-black min-h-screen flex flex-col justify-between">
+
+    <!-- Sticky Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/95 border-b border-zinc-900/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            
+            <!-- Branding Logo Left -->
+            <a href="#" class="flex flex-col items-center text-center group">
+                <div class="w-10 h-10 flex-shrink-0 border border-gold/40 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 duration-300">
+                    <span class="font-serif text-lg text-gold">VM</span>
+                </div>
+                <div class="flex flex-col items-center mt-1">
+                    <span class="font-serif text-[11px] sm:text-[12px] tracking-[0.18em] text-gold-light uppercase leading-none font-medium">VON MORGEN</span>
+                    <span class="text-[6px] tracking-[0.38em] text-gold uppercase font-serif font-light mt-1 pl-[0.38em]">— CONSULTING —</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu Center -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-semibold text-zinc-400">
+                <a href="#vorteile" class="hover:text-gold transition">Vorteile</a>
+                <a href="#prozess" class="hover:text-gold transition">Über Uns</a>
+                <a href="#sektoren" class="hover:text-gold transition">Sektoren</a>
+                <a href="#rechner" class="hover:text-gold transition">Sparrechner</a>
+                <a href="#konfigurator" class="hover:text-gold transition font-bold text-gold">Angebote</a>
+                <a href="#faq" class="hover:text-gold transition">FAQ</a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="flex items-center space-x-3">
+                <button onclick="openModal('appointment')" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-gold/45 hover:border-gold text-gold hover:text-white text-[10px] uppercase tracking-widest font-bold transition-all duration-300">
+                    Termin buchen 📅
+                </button>
+                <a href="#konfigurator" class="inline-flex items-center justify-center px-4 py-2 border border-gold bg-gold text-black hover:bg-black hover:text-gold text-[10px] uppercase tracking-widest font-bold transition-all duration-300">
+                    Kostenlose Analyse
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-b from-zinc-950 via-zinc-950 to-black border-b border-zinc-900/60">
+        <!-- Background Vector grid overlays -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#161619_1px,transparent_1px),linear-gradient(to_bottom,#161619_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_80%,transparent_100%)] opacity-45"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10 space-y-8">
+            <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/25 px-4 py-1.5 text-[9px] font-mono tracking-[0.25em] text-gold uppercase rounded-none font-bold">
+                ⭐ STATTLICH GEPRÜFTES PREMIUM CONSULTING 2026
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-serif font-medium tracking-tight leading-tight max-w-4xl mx-auto text-[#ebd6ab]">
+                Gegen steigende Strompreise: <br class="hidden sm:inline">
+                <span class="gold-gradient-text font-bold">Smarte Sektorenkopplung</span>
+            </h1>
+
+            <p class="text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                Wir bewahren Sie vor der unaufhaltsamen Heizkosten- und Netzstrom-Inflation. Investieren Sie intelligent in herstellerunabhängige Photovoltaik und staatlich subventionierte Wärmepumpentechnik mit exklusiven Sonderkonditionen.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <a href="#rechner" class="inline-flex items-center justify-center px-6 py-3.5 bg-gold text-black hover:bg-black hover:text-gold border border-gold text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-[0_0_15px_rgba(197,168,92,0.2)]">
+                    Wirtschaftlichkeit prüfen 📈
+                </a>
+                <a href="#konfigurator" class="inline-flex items-center justify-center px-6 py-3.5 bg-zinc-950 border border-zinc-800 text-zinc-300 hover:text-white text-xs uppercase tracking-widest font-bold hover:border-zinc-700 transition">
+                    Sofort-Angebot starten
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usps / Broker Section -->
+    <section id="vorteile" class="py-20 bg-black relative border-b border-zinc-900/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-2 reveal-on-scroll">
+                <span class="text-[9px] font-mono tracking-[0.3em] text-gold uppercase font-bold block">UNSER VERSPRECHEN</span>
+                <h2 class="text-2xl sm:text-4xl font-serif text-[#ebd6ab]">Unabhängig & Sachverständig</h2>
+                <p class="text-xs text-zinc-400 max-w-2xl mx-auto">Wir arbeiten frei von Herstellervorgaben und sind ausschließlich Ihrem persönlichen wirtschaftlichen Erfolg verpflichtet.</p>
+                <div class="w-12 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                
+                <div class="reveal-on-scroll bg-zinc-950/80 border border-zinc-900 p-8 space-y-4 hover:border-gold/40 hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.4)] premium-hover-shimmer">
+                    <div class="w-10 h-10 bg-gold/5 border border-gold/20 flex items-center justify-center text-gold transition-transform duration-300 hover:rotate-12">
+                        ✓
+                    </div>
+                    <h3 class="text-base font-semibold tracking-wide uppercase text-white font-serif">100% Lizenzierte Großhandelstarife</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Wir vermitteln Verträge zu direkten Großhändler-Preisen, umgehen teure Zwischenhändler und geben diese massiven Margenvorteile direkt an Sie weiter.
+                    </p>
+                </div>
+
+                <div class="reveal-on-scroll reveal-delay-150 bg-zinc-950/80 border border-zinc-900 p-8 space-y-4 hover:border-gold/40 hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.4)] premium-hover-shimmer">
+                    <div class="w-10 h-10 bg-gold/5 border border-gold/20 flex items-center justify-center text-gold transition-transform duration-300 hover:rotate-12">
+                        ✓
+                    </div>
+                    <h3 class="text-base font-semibold tracking-wide uppercase text-white font-serif">Staatliches Förder-Management</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Profitieren Sie von bis zu 70% nicht rückzahlbaren staatlichen Zuschüssen (KfW/BAFA 2026). Unser hauseigenes Team übernimmt den kompletten Prozess rechtssicher.
+                    </p>
+                </div>
+
+                <div class="reveal-on-scroll reveal-delay-300 bg-zinc-950/80 border border-zinc-900 p-8 space-y-4 hover:border-gold/40 hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.4)] premium-hover-shimmer">
+                    <div class="w-10 h-10 bg-gold/5 border border-gold/20 flex items-center justify-center text-gold transition-transform duration-300 hover:rotate-12">
+                        ✓
+                    </div>
+                    <h3 class="text-base font-semibold tracking-wide uppercase text-white font-serif">Lokale Meister-Fachbetriebe</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Keine dubiosen Vermittler: Ihre Anlagen werden ausschließlich von zertifizierten Elektromeistern und Sanitär-Heizung-Klima Fachbetrieben aus München und Bayern schlüsselfertig montiert.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders & Philosophy Section (AboutUs Replica) -->
+    <section id="prozess" class="py-24 bg-zinc-950 text-white relative border-b border-zinc-900 overflow-hidden">
+        <div class="absolute top-1/4 left-0 w-[50%] h-[50%] bg-gold/5 rounded-full blur-[160px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                
+                <!-- Founder narratives (7 columns) -->
+                <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
+                    <div class="inline-flex items-center space-x-2.5 bg-zinc-900 border border-gold/30 text-gold rounded-full px-3.5 py-1">
+                        <span class="text-[10px] uppercase font-bold tracking-[0.2em] font-mono">Über uns & Philosophie</span>
+                    </div>
+
+                    <h2 class="font-serif font-normal text-3.5xl sm:text-5xl leading-none text-white">
+                        Von Morgen. <br>
+                        <span class="text-gold font-light italic">Für Morgen.</span>
+                    </h2>
+
+                    <p class="text-gold font-serif text-lg italic border-l-2 border-gold pl-4 py-1 leading-relaxed">
+                        "Wir, Elvin und Edi Kaguri, bündeln Jahrzehnte an Erfahrung in Management und Marktstrategie, um für Sie die besten Lösungen im Bereich Energie und Immobilien zu kuratieren."
+                    </p>
+
+                    <!-- Profile Info Blocks -->
+                    <div class="space-y-6 pt-4">
+                        
+                        <div class="reveal-on-scroll reveal-delay-100 p-6 bg-black border border-zinc-900 hover:border-gold/20 transition duration-300">
+                            <span class="text-[10px] uppercase tracking-widest text-gold font-mono font-bold block mb-1">Co-Gründer &amp; Strategie</span>
+                            <h3 class="font-serif text-lg text-white mb-2">Edi Kaguri <span class="text-zinc-400 text-sm font-normal">| Vertriebs-Exzellenz</span></h3>
+                            <p class="text-zinc-400 text-xs leading-relaxed">
+                                Über 20 Jahre Vertriebs- und Führungskenntnisse in DACH-Unternehmen. Edi leitet die strategische Sektoren-Auswahl und verhandelt die optimalen Konditionen bei Großhändlern.
+                            </p>
+                        </div>
+
+                        <div class="reveal-on-scroll reveal-delay-200 p-6 bg-black border border-zinc-900 hover:border-gold/20 transition duration-300">
+                            <span class="text-[10px] uppercase tracking-widest text-gold font-mono font-bold block mb-1">Co-Gründer &amp; Struktur</span>
+                            <h3 class="font-serif text-lg text-white mb-2">Elvin Kaguri <span class="text-zinc-400 text-sm font-normal">| Prozessteuerung</span></h3>
+                            <p class="text-zinc-400 text-xs leading-relaxed">
+                                Mehr als 15 Jahre Erfahrung im reibungslosen Ablauf- und Personalmanagement. Elvin sorgt für pünktliche Projektrealisierung und digitale, bürokratiefreie Abgaben für Ihr Eigenheim.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card Graphic right (5 columns) -->
+                <div class="reveal-on-scroll reveal-delay-300 lg:col-span-5 bg-black border border-zinc-900 p-6 sm:p-8 space-y-6 relative overflow-hidden premium-hover-shimmer transition-all duration-300 hover:-translate-y-1 shadow-lg">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold/5 blur-xl"></div>
+                    
+                    <span class="text-[9px] font-mono tracking-widest text-gold uppercase font-bold block">DIE 4 GRUNDSÄULEN</span>
+                    
+                    <div class="space-y-4 text-xs">
+                        <div class="border-b border-zinc-900 pb-3">
+                            <strong class="text-white block uppercase tracking-wide">1. Klare Strategie (Statt Zufall)</strong>
+                            <p class="text-zinc-400 mt-1">Keine 08/15-Pläne. Präzise energetische Analysen für jedes Bauobjekt.</p>
+                        </div>
+                        <div class="border-b border-zinc-900 pb-3">
+                            <strong class="text-white block uppercase tracking-wide">2. Bewährte Prozesse (Statt Chaos)</strong>
+                            <p class="text-zinc-400 mt-1">Strikte Projektüberwachung bis zur schlüsselfertigen Installation.</p>
+                        </div>
+                        <div class="border-b border-zinc-900 pb-3">
+                            <strong class="text-white block uppercase tracking-wide">3. Starke Partner (Statt Austauschbar)</strong>
+                            <p class="text-zinc-400 mt-1">Direkte Abwicklung durch deutsche lizensierte Meister-Unternehmen.</p>
+                        </div>
+                        <div>
+                            <strong class="text-white block uppercase tracking-wide">4. Echter Mehrwert (Statt leere Versprechen)</strong>
+                            <p class="text-zinc-400 mt-1">Maximierung von Haus-Assetwerten und messbare Ersparnisse für Sie.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sektoren Cards Layout (Segmentinfo) -->
+    <section id="sektoren" class="py-20 bg-black text-white border-b border-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-2 reveal-on-scroll">
+                <span class="text-[9px] font-mono tracking-[0.3em] text-gold uppercase font-bold block">UNSERE VERMITTLUNGSBEREICHE</span>
+                <h2 class="text-2xl sm:text-4xl font-serif text-[#ebd6ab]">Die Vier Sektoren des Erfolges</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 pt-6">
+                
+                <!-- Sektor 1 -->
+                <div class="reveal-on-scroll bg-zinc-950 border border-zinc-900 p-6 flex flex-col justify-between hover:border-gold/30 hover:-translate-y-1 transition-all duration-300 premium-hover-shimmer shadow-md">
+                    <div>
+                        <span class="text-[10px] font-mono text-gold uppercase font-bold">Sektor I</span>
+                        <h3 class="text-md font-bold text-white uppercase tracking-wide mt-2 font-serif">Power Photovoltaik</h3>
+                        <p class="text-zinc-400 text-xs mt-3 leading-relaxed">
+                            Premium-Eigenstrom-Anlagen mit intelligenten Speicherakkus (z.B. Sigenergy). Garantiert 0% MwSt. und bis zu 80% Autarkie-Quote für Ihren Haushalt.
+                        </p>
+                    </div>
+                    <a href="#rechner" class="text-gold text-xs font-bold uppercase tracking-wider block mt-6 hover:underline">Rechner öffnen &rarr;</a>
+                </div>
+
+                <!-- Sektor 2 -->
+                <div class="reveal-on-scroll reveal-delay-100 bg-zinc-950 border border-zinc-900 p-6 flex flex-col justify-between hover:border-gold/30 hover:-translate-y-1 transition-all duration-300 premium-hover-shimmer shadow-md">
+                    <div>
+                        <span class="text-[10px] font-mono text-gold uppercase font-bold">Sektor II</span>
+                        <h3 class="text-md font-bold text-white uppercase tracking-wide mt-2 font-serif">Wärmepumpensysteme</h3>
+                        <p class="text-zinc-400 text-xs mt-3 leading-relaxed">
+                            Hocheffiziente Luft-Wasser-Heizungen renommierter Fabrikate. Nutzen Sie die extreme staatliche Förderung (bis zu 21.000 € Erstattung garantiert).
+                        </p>
+                    </div>
+                    <a href="#rechner" class="text-gold text-xs font-bold uppercase tracking-wider block mt-6 hover:underline">Zuschuss berechnen &rarr;</a>
+                </div>
+
+                <!-- Sektor 3 -->
+                <div class="reveal-on-scroll reveal-delay-200 bg-zinc-950 border border-zinc-900 p-6 flex flex-col justify-between hover:border-gold/30 hover:-translate-y-1 transition-all duration-300 premium-hover-shimmer shadow-md">
+                    <div>
+                        <span class="text-[10px] font-mono text-gold uppercase font-bold">Sektor III</span>
+                        <h3 class="text-md font-bold text-white uppercase tracking-wide mt-2 font-serif">Strom- & Gasbrokerage</h3>
+                        <p class="text-zinc-400 text-xs mt-3 leading-relaxed">
+                            Befreiung von teuren Grundversorger-Tarifen. Wir verhandeln als lizensierter Großhandelspartner exklusive Gewerbe- und Haushalts-Sondertarife.
+                        </p>
+                    </div>
+                    <a href="#konfigurator" class="text-gold text-xs font-bold uppercase tracking-wider block mt-6 hover:underline">Tarife prüfen &rarr;</a>
+                </div>
+
+                <!-- Sektor 4 -->
+                <div class="reveal-on-scroll reveal-delay-300 bg-zinc-950 border border-zinc-900 p-6 flex flex-col justify-between hover:border-gold/30 hover:-translate-y-1 transition-all duration-300 premium-hover-shimmer shadow-md">
+                    <div>
+                        <span class="text-[10px] font-mono text-gold uppercase font-bold">Sektor IV</span>
+                        <h3 class="text-md font-bold text-white uppercase tracking-wide mt-2 font-serif">Immobilien von Morgen</h3>
+                        <p class="text-zinc-400 text-xs mt-3 leading-relaxed">
+                            Wertsteigernde energetische Modernisierung und exklusive Immobilienvermittlung über ein exzellentes, solventes Investoren-Netzwerk im Raum München.
+                        </p>
+                    </div>
+                    <a href="#konfigurator" class="text-gold text-xs font-bold uppercase tracking-wider block mt-6 hover:underline">Ansprechpartner &rarr;</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Savings Interactive Calculator Section (Rechner) -->
+    <section id="rechner" class="py-20 bg-zinc-950 border-b border-zinc-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-2 reveal-on-scroll">
+                <span class="text-[9px] font-mono tracking-[0.3em] text-gold uppercase font-bold block">INTELLIGENTES BERECHNUNGS-SYSTEM</span>
+                <h2 class="text-2xl sm:text-4xl font-serif text-[#ebd6ab]">Wirtschaftlichkeits- & Ersparnisrechner</h2>
+                <p class="text-xs text-zinc-400 max-w-2xl mx-auto">
+                    Justieren Sie Ihre eigenen Haushalts-Daten und vergleichen Sie Live die Rentabilität von Photovoltaik und Wärmepumpentechnik unter Einpreisung der aktuellen Subventionen.
+                </p>
+                <div class="w-12 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Main Interactive UI Row Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-6">
+                
+                <!-- Filter Controls (Left, 5 cols) -->
+                <div class="reveal-on-scroll lg:col-span-5 bg-black border border-zinc-900 p-6 sm:p-8 space-y-6 shadow-xl">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2">
+                        <span>⚙</span> Haushalts-Parameter
+                    </h3>
+
+                    <div class="h-px bg-zinc-900"></div>
+
+                    <!-- Sector segment selection tabs -->
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-mono tracking-wider text-zinc-500 uppercase font-bold">Anlagensegment</label>
+                        <div class="flex bg-zinc-900 p-1 border border-zinc-800">
+                            <button onclick="setCalcProduct('photovoltaik')" id="calc-tab-pv" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider transition bg-gold text-black focus:outline-none">
+                                Solar (PV)
+                            </button>
+                            <button onclick="setCalcProduct('waermepumpe')" id="calc-tab-wp" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider transition text-zinc-400 hover:text-white focus:outline-none">
+                                Heizung (WP)
+                            </button>
+                            <button onclick="setCalcProduct('beratung_komplett')" id="calc-tab-both" class="flex-1 py-2 text-[10px] font-bold uppercase tracking-wider transition text-zinc-400 hover:text-white focus:outline-none font-mono">
+                                Beide (PV+WP)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slider 1: Electricity Price -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-zinc-400">Aktueller Stromtarif:</span>
+                            <span class="font-mono text-gold font-semibold" id="val-strompreis">0.36 €/kWh</span>
+                        </div>
+                        <input type="range" id="val-in-price" min="0.25" max="0.55" step="0.01" value="0.36" oninput="runRecalc()">
+                        <div class="flex justify-between text-[9px] text-zinc-600 font-mono">
+                            <span>0.25 €</span>
+                            <span>0.55 €</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2: Annual Power Consumption -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-zinc-400">Strombezug (jährlich):</span>
+                            <span class="font-mono text-gold font-semibold" id="val-stromverbrauch">4.000 kWh</span>
+                        </div>
+                        <input type="range" id="val-in-cons" min="1500" max="15000" step="250" value="4000" oninput="runRecalc()">
+                        <div class="flex justify-between text-[9px] text-zinc-600 font-mono">
+                            <span>1.500 kWh</span>
+                            <span>15.000 kWh</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 3: Current heating cost (Visible for HP or Beide) -->
+                    <div class="space-y-2" id="block-calc-heating">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-zinc-400">Heizkosten (akt. Gas/Öl jährlich):</span>
+                            <span class="font-mono text-gold font-semibold" id="val-heizkosten">2.500 €</span>
+                        </div>
+                        <input type="range" id="val-in-heating" min="1000" max="6000" step="100" value="2500" oninput="runRecalc()">
+                        <div class="flex justify-between text-[9px] text-zinc-600 font-mono">
+                            <span>1.000 €</span>
+                            <span>6.000 €</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 4: Roof size (Visible for PV or Beide) -->
+                    <div class="space-y-2" id="block-calc-roof">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-zinc-400">Nutzbare Dachfläche:</span>
+                            <span class="font-mono text-gold font-semibold" id="val-dachflaeche">50 m²</span>
+                        </div>
+                        <input type="range" id="val-in-roof" min="20" max="200" step="5" value="50" oninput="runRecalc()">
+                        <div class="flex justify-between text-[9px] text-zinc-600 font-mono">
+                            <span>20 m²</span>
+                            <span>200 m²</span>
+                        </div>
+                    </div>
+
+                    <!-- Battery box (Visible for PV or Beide) -->
+                    <div id="block-calc-battery" class="flex items-center justify-between p-3.5 bg-zinc-900/40 border border-zinc-900">
+                        <div class="space-y-0.5">
+                            <span class="text-xs font-semibold text-white uppercase tracking-wider block">Speicherbündnis inklusive (10 kWh)</span>
+                            <span class="text-[9px] text-zinc-500 block">Hebt solaren Eigenverbrauch verlässlich auf 75%</span>
+                        </div>
+                        <input type="checkbox" id="val-in-battery" checked onchange="runRecalc()" class="w-4 h-4 accent-gold cursor-pointer rounded-none">
+                    </div>
+
+                </div>
+
+                <!-- Outputs Panel (Right, 7 cols) -->
+                <div class="reveal-on-scroll reveal-delay-200 lg:col-span-7 space-y-6">
+                    
+                    <!-- Metrics grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        
+                        <div class="bg-black border border-zinc-900 p-6 flex flex-col justify-between relative overflow-hidden">
+                            <span class="text-[9px] font-mono tracking-widest text-gold font-semibold uppercase block">Jahresersparnis</span>
+                            <div class="mt-4">
+                                <span class="text-2xl sm:text-3xl font-serif text-[#ebd6ab] font-bold" id="out-savings">0 €</span>
+                                <p class="text-[9px] text-zinc-500 mt-1">Direkte Haushaltsentlastung</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-black border border-zinc-900 p-6 flex flex-col justify-between relative overflow-hidden">
+                            <span class="text-[9px] font-mono tracking-widest text-zinc-400 font-semibold uppercase block">Netto-Eigenleistung</span>
+                            <div class="mt-4">
+                                <span class="text-2xl sm:text-3xl font-sans text-white font-bold" id="out-investment">0 €</span>
+                                <p class="text-[9px] text-[#10b981] mt-1" id="out-subsidies">Abzgl. Förderzuschuß</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-black border border-zinc-900 p-6 flex flex-col justify-between relative overflow-hidden">
+                            <span class="text-[9px] font-mono tracking-widest text-gold-dark font-semibold uppercase block">Amortisationszeit</span>
+                            <div class="mt-4">
+                                <span class="text-2xl sm:text-3xl font-mono text-gold font-bold" id="out-payback">0 Jahre</span>
+                                <p class="text-[9px] text-zinc-500 mt-1">Erreichter Break-Even-Point</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Long-range projection progress indicators -->
+                    <div class="bg-zinc-950 border border-zinc-900 p-6 sm:p-8 space-y-6">
+                        <div class="flex justify-between items-center border-b border-zinc-900 pb-3">
+                            <h4 class="text-xs uppercase font-serif tracking-widest font-bold text-white">Langzeitprognose (Akkumulierte Gelderparnis)</h4>
+                            <span class="text-[10px] font-mono uppercase bg-gold/15 text-gold px-2 py-0.5 border border-gold/20" id="badge-calc-scenario">PV &amp; Wärmepumpe</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- 10 Years -->
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between text-xs font-mono">
+                                    <span class="text-zinc-500">Nach 10 Jahren:</span>
+                                    <span class="text-white font-bold" id="cum-10">0 €</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-zinc-900">
+                                    <div class="h-full bg-gold transition-all duration-500" id="prog-10" style="width: 0%"></div>
+                                </div>
+                            </div>
+
+                            <!-- 15 Years -->
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between text-xs font-mono">
+                                    <span class="text-zinc-500">Nach 15 Jahren:</span>
+                                    <span class="text-white font-bold" id="cum-15">0 €</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-zinc-900">
+                                    <div class="h-full bg-emerald-500 transition-all duration-500" id="prog-15" style="width: 0%"></div>
+                                </div>
+                            </div>
+
+                            <!-- 20 Years -->
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between text-xs font-mono">
+                                    <span class="text-zinc-500">Nach 20 Jahren (Lebensdauer):</span>
+                                    <span class="text-white font-bold" id="cum-20">0 €</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-zinc-900">
+                                    <div class="h-full bg-[#10b981] transition-all duration-500" id="prog-20" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-[9px] text-zinc-500 font-mono leading-relaxed pt-2">
+                            * Hinweis: Die prognostizierte Rendite kalkuliert eine moderate jährliche Energiepreis-Inflation von 2,5 % p.a. mit ein. Eine höhere Inflation der Netzbezugstarife beschleunigt die Amortisationsdauer zusätzlich.
+                        </p>
+                    </div>
+
+                    <!-- Call To Action block inside calc -->
+                    <div class="p-4 bg-gold/10 border border-gold/25 flex items-center justify-between">
+                        <div class="space-y-1 pr-2">
+                            <h4 class="text-xs font-bold uppercase text-white">Daten für die Analyse übernehmen?</h4>
+                            <p class="text-[9px] text-zinc-400">Tragen Sie Ihre Zahlen jetzt direkt in das offizielle Vermessungsformular ein.</p>
+                        </div>
+                        <a href="#konfigurator" class="px-4 py-2 border border-gold bg-gold hover:bg-black text-black hover:text-gold text-[9px] uppercase tracking-widest font-bold transition">
+                            Zahlen Übertragen
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Multi-Step Interactive Configurator Questionnaire (Angebote) -->
+    <section id="konfigurator" class="py-20 bg-black relative border-b border-zinc-900">
+        <div class="max-w-3xl mx-auto px-4 space-y-8">
+            
+            <div class="text-center space-y-2 reveal-on-scroll">
+                <span class="text-[9px] font-mono tracking-[0.3em] text-gold uppercase font-bold block">SCHNELLANFRAGE IN 4 SCHRITTEN</span>
+                <h2 class="text-2xl sm:text-3xl font-serif text-[#ebd6ab]">Online Sektoren-Bedarfsanalyse</h2>
+                <p class="text-xs text-zinc-400">Richten Sie Ihre herstellerunabhängige Angebotsanfrage direkt an das Sachverständigenbüro München.</p>
+                <div class="w-12 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Steps Progress Bar -->
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 uppercase tracking-widest pt-2">
+                <span id="step-indicator-1" class="text-gold font-bold">1. Segment</span>
+                <span id="step-indicator-2">2. Objekt</span>
+                <span id="step-indicator-3">3. Verbrauch</span>
+                <span id="step-indicator-4">4. Bestätigung</span>
+            </div>
+            
+            <div class="relative w-full h-[2px] bg-zinc-900">
+                <div id="step-progress-line" class="absolute h-full bg-gold transition-all duration-300" style="width: 25%"></div>
+            </div>
+
+            <!-- Questionnaire Form -->
+            <form id="configuratorForm" class="reveal-on-scroll reveal-delay-150 bg-zinc-950 border border-zinc-900 p-6 sm:p-10 space-y-6" onsubmit="submitConfigurator(event)">
+                
+                <!-- STEP 1: Segmentauswahl -->
+                <div id="step-content-1" class="space-y-6">
+                    <p class="text-xs text-zinc-400">Welcher Produkt- und Einsparungsbereich ist für Ihre Immobilie von primärem Interesse?</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <label class="border border-zinc-800 p-4 block cursor-pointer bg-black/40 hover:border-gold/30 relative">
+                            <input type="radio" name="conf-segment" value="beratung_komplett" checked class="absolute top-4 right-4 accent-gold">
+                            <span class="font-serif text-sm font-semibold text-white block">Sektorenkopplung (PV &amp; WP)</span>
+                            <span class="text-[10px] text-zinc-500 mt-1.5 block">Kombiniertes System für maximale Autarkie &amp; höchste Förderung</span>
+                        </label>
+
+                        <label class="border border-zinc-800 p-4 block cursor-pointer bg-black/40 hover:border-gold/30 relative">
+                            <input type="radio" name="conf-segment" value="photovoltaik" class="absolute top-4 right-4 accent-gold">
+                            <span class="font-serif text-sm font-semibold text-white block">Reine Photovoltaikanlage</span>
+                            <span class="text-[10px] text-zinc-500 mt-1.5 block">Nutzung von ungenutzten Dachflächen (0% Mehrwertsteuer)</span>
+                        </label>
+
+                        <label class="border border-zinc-800 p-4 block cursor-pointer bg-black/40 hover:border-gold/30 relative">
+                            <input type="radio" name="conf-segment" value="waermepumpe" class="absolute top-4 right-4 accent-gold">
+                            <span class="font-serif text-sm font-semibold text-white block">Moderne Wärmepumpe</span>
+                            <span class="text-[10px] text-zinc-500 mt-1.5 block">Heizungswechsel mit bis zu 21.000 € Erstattungsförderung</span>
+                        </label>
+
+                        <label class="border border-zinc-800 p-4 block cursor-pointer bg-black/40 hover:border-gold/30 relative">
+                            <input type="radio" name="conf-segment" value="strom_gas" class="absolute top-4 right-4 accent-gold">
+                            <span class="font-serif text-sm font-semibold text-white block">Strom- &amp; Gastarifberatung</span>
+                            <span class="text-[10px] text-zinc-500 mt-1.5 block">Regulierung von Bestandstarifen auf günstige Sonderpreise</span>
+                        </label>
+
+                    </div>
+
+                    <div class="flex justify-end pt-4">
+                        <button type="button" onclick="goToStep(2)" class="px-6 py-2.5 bg-gold text-black hover:bg-black hover:text-gold border border-gold text-xs uppercase tracking-widest font-bold transition">
+                            Weiter &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Gebäude-Details -->
+                <div id="step-content-2" class="hidden space-y-6">
+                    <p class="text-xs text-zinc-400">Lassen Sie uns einige Details zum betroffenen Gebäude und Besitztum festhalten.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Gebäudetyp</label>
+                            <select id="conf-housetype" class="w-full bg-black border border-zinc-805 py-2.5 px-3.5 text-xs text-white outline-none rounded-none">
+                                <option value="einfamilienhaus">Einfamilienhaus</option>
+                                <option value="zweifamilienhaus">Zweifamilienhaus</option>
+                                <option value="mehrfamilienhaus">Mehrfamilienhaus</option>
+                                <option value="gewerbe">Gewerbeimmobilie</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Eigentumsverhältnis</label>
+                            <select id="conf-ownership" class="w-full bg-black border border-zinc-805 py-2.5 px-3.5 text-xs text-white outline-none rounded-none">
+                                <option value="eigentuemer">Eigentümer der Immobilie</option>
+                                <option value="mieter">Mieter (Zustimmung nötig)</option>
+                                <option value="stifter">Stiftung / WEG-Verwaltung</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Aktuelle Heizungsart (v.a. bei WP)</label>
+                            <select id="conf-heating" class="w-full bg-black border border-zinc-805 py-2.5 px-3.5 text-xs text-white outline-none rounded-none">
+                                <option value="oel">Ölheizung</option>
+                                <option value="gas">Gasheizung</option>
+                                <option value="strom">Nachtspeicheröfen / Infrarot</option>
+                                <option value="holz">Holzpellets / Kachelofen</option>
+                                <option value="waermepumpe">Bereits Wärmepumpe (Altgerät)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Förderinteressent?</label>
+                            <select id="conf-subsidies" class="w-full bg-black border border-zinc-805 py-2.5 px-3.5 text-xs text-white outline-none rounded-none">
+                                <option value="true">Ja, staatliche Fördersumme einplanen</option>
+                                <option value="false">Nein, rein private Anschaffung</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-between pt-4">
+                        <button type="button" onclick="goToStep(1)" class="px-6 py-2.5 bg-transparent text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-bold transition">
+                            &larr; Zurück
+                        </button>
+                        <button type="button" onclick="goToStep(3)" class="px-6 py-2.5 bg-gold text-black hover:bg-black hover:text-gold border border-gold text-xs uppercase tracking-widest font-bold transition">
+                            Weiter &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Verbrauchsdaten -->
+                <div id="step-content-3" class="hidden space-y-6">
+                    <p class="text-xs text-zinc-400">Wie hoch sind Ihre ungefähren Energie-Konsum-Werte zur korrekten Dimensionierung der Sektoren?</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Stromverbrauch (jährlich in kWh)</label>
+                            <input type="number" id="conf-electricity" value="4500" class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="z.B. 4500">
+                        </div>
+
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5 font-sans">Nutzbare ungefähre Dachfläche (in m²)</label>
+                            <input type="number" id="conf-roof" value="65" class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="z.B. 65">
+                        </div>
+
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Ungefähres Budget für Eigenleistung (in €)</label>
+                            <input type="number" id="conf-budget" value="18000" class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="z.B. 18000">
+                        </div>
+
+                        <div class="flex items-center space-x-2.5 pt-6 pl-1">
+                            <input type="checkbox" id="conf-battery-storage" checked class="w-4 h-4 accent-gold cursor-pointer rounded-none">
+                            <label for="conf-battery-storage" class="text-xs font-semibold text-zinc-300">Batteriespeicher explizit erwünscht?</label>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-between pt-4">
+                        <button type="button" onclick="goToStep(2)" class="px-6 py-2.5 bg-transparent text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-bold transition">
+                            &larr; Zurück
+                        </button>
+                        <button type="button" onclick="goToStep(4)" class="px-6 py-2.5 bg-gold text-black hover:bg-black hover:text-gold border border-gold text-xs uppercase tracking-widest font-bold transition">
+                            Weiter &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: Kontaktdaten & Absenden -->
+                <div id="step-content-4" class="hidden space-y-6">
+                    <p class="text-xs text-zinc-400">Geben Sie abschließend Ihre Kontaktdatensätze ein, damit wir Sie anrufen und Ihre kostenfreie Zertifizierung absichern können.</p>
+                    
+                    <div class="space-y-4">
+                        
+                        <div>
+                            <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Vollständiger Name (Ansprechpartner)</label>
+                            <input type="text" id="conf-name" required class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="z.B. Elvin Kaguri">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">E-Mail-Adresse</label>
+                                <input type="email" id="conf-email" required class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="name@domain.de">
+                            </div>
+                            <div>
+                                <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Telefonnummer für Erstkontakt</label>
+                                <input type="tel" id="conf-phone" required class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="+49 170 1234567">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Postleitzahl des Objekts</label>
+                                <input type="text" id="conf-zip" required class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="z.B. 80689">
+                            </div>
+                            <div>
+                                <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1.5">Stadt / Gemeinde (München u.U.)</label>
+                                <input type="text" id="conf-city" required class="w-full bg-black border border-zinc-800 py-2.5 px-3.5 text-xs text-white outline-none rounded-none" placeholder="Gauting / Freising / München">
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-2.5 py-2">
+                            <input type="checkbox" required id="conf-consent" class="mt-1 accent-gold cursor-pointer rounded-none">
+                            <label for="conf-consent" class="text-[10px] text-zinc-500 leading-normal">
+                                Ich erkläre mich damit einverstanden, dass Von Morgen Consulting mich zum Zwecke der kostenlosen Sektorenberatung telefonisch oder schriftlich per E-Mail kontaktieren darf.
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-between pt-4">
+                        <button type="button" onclick="goToStep(3)" class="px-6 py-2.5 bg-transparent text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-bold transition">
+                            &larr; Zurück
+                        </button>
+                        <button type="submit" class="px-6 py-2.5 bg-gold text-black hover:bg-black hover:text-gold border border-gold text-xs uppercase tracking-widest font-bold transition">
+                            Analyse jetzt absenden ✉️
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Response Alert Feedback -->
+                <div id="conf-feedback" class="hidden text-center text-xs font-mono p-4 bg-zinc-900 border border-zinc-800 text-gold-light mt-4">
+                    Vielen Dank für Ihre Anfrage! Wir melden uns in Kürze telefonisch bei Ihnen.
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- FAQ Accordion section -->
+    <section id="faq" class="py-20 bg-zinc-950 border-t border-zinc-900/60 relative">
+        <div class="max-w-4xl mx-auto px-4 space-y-12">
+            
+            <div class="text-center space-y-2 reveal-on-scroll">
+                <span class="text-[9px] font-mono tracking-[0.3em] text-gold uppercase font-bold block">QUALITÄT &amp; TRANSPARENZ</span>
+                <h2 class="text-2xl sm:text-4xl font-serif text-[#ebd6ab]">Häufig gestellte Fragen</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Accordion blocks -->
+            <div class="space-y-4 pt-6 reveal-on-scroll reveal-delay-150">
+                
+                <!-- Q1 -->
+                <div class="bg-black border border-zinc-900 p-5 cursor-pointer hover:border-zinc-800 transition" onclick="toggleFaq(1)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-medium text-white tracking-wide">Wie läuft die zinsgünstige KfW-Heizungsförderung 2026 genau ab?</h4>
+                        <span id="faq-icon-1" class="text-gold font-mono text-base">+</span>
+                    </div>
+                    <div id="faq-answer-1" class="hidden text-xs text-zinc-400 mt-4 leading-relaxed pt-2 border-t border-zinc-900 max-w-3xl">
+                        Die BAFA bietet im Rahmen des Gesetzes für die Wärmeplanung (BEG 2026) einen Zuschuss von bis zu 70 % auf die förderfähigen Kosten von maximal 30.000 €. Dies entspricht einer garantierten Direktauszahlung von bis zu 21.000 €. Die Restsumme kann zudem über besonders zinsgünstige Ergänzungskredite finanziert werden. Wir steuern und zertifizieren diesen Beantragungsprozess fehlerfrei für Sie.
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-black border border-zinc-900 p-5 cursor-pointer hover:border-zinc-800 transition" onclick="toggleFaq(2)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-medium text-white tracking-wide">Was versteht man unter dem Begriff Sektorenkopplung?</h4>
+                        <span id="faq-icon-2" class="text-gold font-mono text-base">+</span>
+                    </div>
+                    <div id="faq-answer-2" class="hidden text-xs text-zinc-400 mt-4 leading-relaxed pt-2 border-t border-zinc-900 max-w-3xl">
+                        Unter Sektorenkopplung versteht man die intelligente Vernetzung Ihrer dezentralen Stromerzeugung (Photovoltaik) mit Ihrer Heizungstechnik (Wärmepumpe) und optional der E-Mobilität (Wallbox). Über ein smartes Energiemanagement (HEMS) betreiben Sie die Wärmepumpe größtenteils mit kostenlosem, sauberem Strom von Ihrem eigenen Dach. Das verringert die Abhängigkeit von Netzversorgern drastisch.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-black border border-zinc-900 p-5 cursor-pointer hover:border-zinc-800 transition" onclick="toggleFaq(3)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-medium text-white tracking-wide">Seid ihr herstellergebunden oder vermittelt ihr frei?</h4>
+                        <span id="faq-icon-3" class="text-gold font-mono text-base">+</span>
+                    </div>
+                    <div id="faq-answer-3" class="hidden text-xs text-zinc-400 mt-4 leading-relaxed pt-2 border-t border-zinc-900 max-w-3xl">
+                        Wir arbeiten vollkommen unabhängig als sachverständige Energiebroker und Premium-Berater. Das bedeutet für Sie: Wir bewerten Ihren Standort und Grundriss unvoreingenommen und wählen aus einem breiten Portfolio qualitativer Hersteller (z.B. Viessmann, Bosch, Nibe, Senec, SMA, Meyer Burger) exakt das Paket aus, das die beste Amortisation für Ihr Budget bietet.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-6">
+            
+            <div class="flex flex-col items-center">
+                <div class="w-8 h-8 border border-gold/30 rounded-full flex items-center justify-center text-xs font-serif text-gold">VM</div>
+                <span class="text-[10px] font-serif tracking-[0.2em] text-gold-light mt-1 uppercase">VON MORGEN</span>
+                <span class="text-[5.5px] tracking-[0.38em] text-gold uppercase font-serif font-light mt-0.5">— CONSULTING —</span>
+            </div>
+
+            <p class="text-xs text-zinc-500 max-w-lg mx-auto">
+                Ihr staatlich eingetragener Energie- und Immobilienbroker in München. Telefon: +49 821 20950331 • E-Mail: info@von-morgen-consulting.de
+            </p>
+
+            <div class="flex justify-center space-x-6 text-[10px] text-zinc-500 uppercase tracking-widest">
+                <button onclick="openModal('legal')" class="hover:text-gold transition">Impressum</button>
+                <button onclick="openModal('legal')" class="hover:text-gold transition">Datenschutz</button>
+                <button onclick="openModal('legal')" class="hover:text-gold transition">AGB</button>
+            </div>
+
+            <p class="text-[9px] text-zinc-600 font-mono">
+                &copy; 2026 Von Morgen Consulting. Alle Rechte vorbehalten.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Overlay Modals -->
+    
+    <!-- Modal: Appointments -->
+    <div id="modal-appointment" class="fixed inset-0 z-50 hidden glass-panel flex items-center justify-center p-4">
+        <div class="bg-zinc-950 border border-zinc-900 w-full max-w-md p-6 relative">
+            <button onclick="closeModal('appointment')" class="absolute top-4 right-4 text-zinc-400 hover:text-white font-mono text-base">&times;</button>
+            
+            <span class="text-[9px] font-mono tracking-widest text-gold uppercase font-bold block mb-1">TERMIN BUCHEN</span>
+            <h3 class="font-serif text-lg text-white mb-4">Wunschtermin reservieren</h3>
+            
+            <form onsubmit="submitAppointment(event)" class="space-y-4">
+                <div>
+                    <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1">Vollständiger Name</label>
+                    <input type="text" id="appt-name" required class="w-full bg-black border border-zinc-800 text-xs text-white p-2 outline-none rounded-none">
+                </div>
+                <div>
+                    <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1">E-Mail-Adresse</label>
+                    <input type="email" id="appt-email" required class="w-full bg-black border border-zinc-800 text-xs text-white p-2 outline-none rounded-none">
+                </div>
+                <div>
+                    <label class="text-[9px] uppercase font-mono tracking-wider text-zinc-400 block mb-1">Gewünschter Termin (Tag &amp; Uhrzeit)</label>
+                    <input type="datetime-local" id="appt-date" required class="w-full bg-black border border-zinc-800 text-xs text-white p-2 outline-none rounded-none">
+                </div>
+                <button type="submit" class="w-full bg-gold border border-gold hover:bg-black text-black hover:text-gold uppercase tracking-wider font-bold py-2 text-xs">
+                    Termin anfragen ➔
+                </button>
+                <div id="appt-feedback" class="hidden text-center text-xs p-2 text-gold">
+                    Terminanfrage erfolgreich erhalten! Wir prüfen und senden eine E-Mail-Bestätigung.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Legal content (Impressum, Datenschutz, AGB) -->
+    <div id="modal-legal" class="fixed inset-0 z-50 hidden glass-panel flex items-center justify-center p-4">
+        <div class="bg-zinc-950 border border-zinc-900 w-full max-w-3xl p-6 sm:p-10 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('legal')" class="absolute top-4 right-4 text-zinc-400 hover:text-white font-mono text-base">&times;</button>
+            
+            <h3 class="font-serif text-xl text-gold mb-6 border-b border-zinc-900 pb-3" id="legal-title">Pflichtangaben nach § 5 TMG</h3>
+            
+            <div class="text-xs text-zinc-400 space-y-4 leading-relaxed" id="legal-body">
+                <strong>Anbieterkennzeichnung:</strong><br>
+                Von Morgen Consulting GbR<br>
+                Blumenauerstrasse 8, 80689 München<br>
+                Ansprechpartner: Elvin Kaguri &amp; Edi Kaguri<br>
+                Telefon: +49 821 20950331<br>
+                E-Mail: info@von-morgen-consulting.de<br><br>
+                <strong>Zuständige Erlaubnisbehörde:</strong><br>
+                Gewerbeamt der Landeshauptstadt München, Bayern.<br><br>
+                <strong>Vermittlerregister:</strong><br>
+                Eingetragen als ungebundene Makler und Berater. Alle Förderberatungen entsprechen den Richtlinien der Bafa/KfW 2026.
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Concierge Widget -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-2">
+        <div id="concierge-box" class="hidden bg-zinc-950 border border-zinc-900 p-4 w-64 shadow-2xl space-y-3 mb-2 bounce-premium">
+            <div class="flex items-center space-x-2 border-b border-zinc-900 pb-2">
+                <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full"></div>
+                <span class="text-[10px] font-mono uppercase tracking-widest text-gold font-bold">Live Partner-Concierge</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 leading-normal">
+                Guten Tag! Haben Sie Fragen zur Sektorenförderung der KfW für Ihr Vorhaben? Hinterlassen Sie uns eine Nachricht!
+            </p>
+            <a href="#konfigurator" class="block text-center text-[10px] bg-gold text-black uppercase font-bold py-1 px-2">
+                Analyse Starten
+            </a>
+        </div>
+        <button onclick="toggleConcierge()" class="bg-black hover:bg-gold text-gold hover:text-black p-3.5 border border-zinc-800 hover:border-gold rounded-full flex items-center justify-center transition shadow-2xl cursor-pointer bounce-premium">
+            <span class="font-bold text-sm">💬 Help</span>
+        </button>
+    </div>
+
+    <!-- Live Client-side Logic Script -->
+    <script>
+        // State management
+        let currentCalcProduct = 'beratung_komplett';
+        let currentStep = 1;
+
+        // Toggle FAQ Accordions
+        function toggleFaq(num) {
+            const answer = document.getElementById('faq-answer-' + num);
+            const icon = document.getElementById('faq-icon-' + num);
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.innerText = '−';
+            } else {
+                answer.classList.add('hidden');
+                icon.innerText = '+';
+            }
+        }
+
+        // Modals opening/closing helper
+        function openModal(id) {
+            document.getElementById('modal-' + id).classList.remove('hidden');
+        }
+        function closeModal(id) {
+            document.getElementById('modal-' + id).classList.add('hidden');
+        }
+
+        // Concierge talk bubble
+        function toggleConcierge() {
+            const el = document.getElementById('concierge-box');
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        // Step questionnaire tracker
+        function goToStep(stepNum) {
+            // Hide current
+            document.getElementById('step-content-' + currentStep).classList.add('hidden');
+            document.getElementById('step-indicator-' + currentStep).classList.remove('text-gold', 'font-bold');
+            
+            // Show new
+            document.getElementById('step-content-' + stepNum).classList.remove('hidden');
+            const ind = document.getElementById('step-indicator-' + stepNum);
+            ind.classList.add('text-gold', 'font-bold');
+            
+            currentStep = stepNum;
+
+            // Adjust width limit
+            let progressMapping = {1: '25%', 2: '50%', 3: '75%', 4: '100%'};
+            document.getElementById('step-progress-line').style.width = progressMapping[stepNum];
+        }
+
+        // Set segment in interactive calculator
+        function setCalcProduct(prodName) {
+            currentCalcProduct = prodName;
+
+            // Tabs toggle colors
+            const tabPV = document.getElementById('calc-tab-pv');
+            const tabWP = document.getElementById('calc-tab-wp');
+            const tabBoth = document.getElementById('calc-tab-both');
+
+            // Reset classes
+            [tabPV, tabWP, tabBoth].forEach(btn => {
+                btn.classList.add('text-zinc-400', 'hover:text-white');
+                btn.classList.remove('bg-gold', 'text-black');
+            });
+
+            if (prodName === 'photovoltaik') {
+                tabPV.classList.remove('text-zinc-400', 'hover:text-white');
+                tabPV.classList.add('bg-gold', 'text-black');
+                document.getElementById('block-calc-heating').classList.add('hidden');
+                document.getElementById('block-calc-roof').classList.remove('hidden');
+                document.getElementById('block-calc-battery').classList.remove('hidden');
+                document.getElementById('badge-calc-scenario').innerText = "Photovoltaik Segment";
+            } else if (prodName === 'waermepumpe') {
+                tabWP.classList.remove('text-zinc-400', 'hover:text-white');
+                tabWP.classList.add('bg-gold', 'text-black');
+                document.getElementById('block-calc-heating').classList.remove('hidden');
+                document.getElementById('block-calc-roof').classList.add('hidden');
+                document.getElementById('block-calc-battery').classList.add('hidden');
+                document.getElementById('badge-calc-scenario').innerText = "Wärmepumpen Segment";
+            } else {
+                tabBoth.classList.remove('text-zinc-400', 'hover:text-white');
+                tabBoth.classList.add('bg-gold', 'text-black');
+                document.getElementById('block-calc-heating').classList.remove('hidden');
+                document.getElementById('block-calc-roof').classList.remove('hidden');
+                document.getElementById('block-calc-battery').classList.remove('hidden');
+                document.getElementById('badge-calc-scenario').innerText = "Vollständig gekoppelte Sektoren";
+            }
+
+            runRecalc();
+        }
+
+        // Live calculator calculation formulas (match React App.tsx formulas)
+        function runRecalc() {
+            const electricityPrice = parseFloat(document.getElementById('val-in-price').value);
+            const annualElectricity = parseInt(document.getElementById('val-in-cons').value);
+            const currentHeatingCost = parseInt(document.getElementById('val-in-heating').value);
+            const roofSize = parseInt(document.getElementById('val-in-roof').value);
+            const hasBattery = document.getElementById('val-in-battery').checked;
+
+            // Feed updated labels
+            document.getElementById('val-strompreis').innerText = electricityPrice.toFixed(2) + " €/kWh";
+            document.getElementById('val-stromverbrauch').innerText = annualElectricity.toLocaleString('de-DE') + " kWh";
+            document.getElementById('val-heizkosten').innerText = currentHeatingCost.toLocaleString('de-DE') + " €";
+            document.getElementById('val-dachflaeche').innerText = roofSize + " m²";
+
+            // Math execution
+            // 1. Solar
+            const pvCapacitykWp = Math.round((roofSize * 0.2) * 10) / 10;
+            const annualPvYieldKwh = Math.round(roofSize * 180);
+            const pvSelfConsumptionRate = hasBattery ? 0.75 : 0.30;
+            const selfConsumedKwh = Math.min(annualElectricity, annualPvYieldKwh * pvSelfConsumptionRate);
+            const gridFeedInKwh = Math.max(0, annualPvYieldKwh - selfConsumedKwh);
+            const pvSavings = (selfConsumedKwh * electricityPrice) + (gridFeedInKwh * 0.082);
+
+            let pvCost = hasBattery ? Math.round(12000 + (pvCapacitykWp * 800)) : Math.round(pvCapacitykWp * 1300);
+            let pvSubsidies = 0; // 0% vat holds
+
+            // 2. Heatpump 
+            const wpBase = 36000;
+            const wpVar = Math.min(6000, Math.max(-2000, (currentHeatingCost - 2400) * 1.5));
+            const wpCost = Math.round(wpBase + wpVar);
+            const wpSubsidies = Math.min(21000, Math.round(wpCost * 0.58));
+            const wpSavings = (currentHeatingCost * 0.60) + (currentCalcProduct === 'beratung_komplett' ? 400 : 0);
+
+            let totalSavings = 0;
+            let totalInvestment = 0;
+            let totalSubsidies = 0;
+
+            if (currentCalcProduct === 'photovoltaik') {
+                totalSavings = pvSavings;
+                totalInvestment = pvCost;
+                totalSubsidies = pvSubsidies;
+            } else if (currentCalcProduct === 'waermepumpe') {
+                totalSavings = wpSavings;
+                totalInvestment = wpCost;
+                totalSubsidies = wpSubsidies;
+            } else {
+                // Beide
+                totalSavings = pvSavings + wpSavings;
+                totalInvestment = pvCost + wpCost;
+                totalSubsidies = pvSubsidies + wpSubsidies;
+            }
+
+            // Cap figures
+            totalInvestment = Math.round(totalInvestment);
+            totalSubsidies = Math.round(totalSubsidies);
+            totalSavings = Math.round(totalSavings);
+            const netContribution = Math.max(0, totalInvestment - totalSubsidies);
+            const paybackYears = Math.round((netContribution / Math.max(100, totalSavings)) * 10) / 10;
+
+            // Set dynamic visual text
+            document.getElementById('out-savings').innerText = totalSavings.toLocaleString('de-DE') + " €";
+            document.getElementById('out-investment').innerText = netContribution.toLocaleString('de-DE') + " €";
+            document.getElementById('out-subsidies').innerText = totalSubsidies > 0 ? "Inkl. −" + totalSubsidies.toLocaleString('de-DE') + " € KfW Hilfen" : "Abzgl. 0% Steuersatz";
+            document.getElementById('out-payback').innerText = paybackYears.toFixed(1) + " Jahre";
+
+            // High-fidelity progressive calculations for 10, 15, 20 yr bars with simulated 2.5% inflation rate
+            const calcFutureSum = (annualSaving, years, rate = 0.025) => {
+                let sum = 0;
+                for (let i = 0; i < years; i++) {
+                    sum += annualSaving * Math.pow(1 + rate, i);
+                }
+                return Math.round(sum);
+            };
+
+            const yr10Sum = calcFutureSum(totalSavings, 10);
+            const yr15Sum = calcFutureSum(totalSavings, 15);
+            const yr20Sum = calcFutureSum(totalSavings, 20);
+
+            document.getElementById('cum-10').innerText = yr10Sum.toLocaleString('de-DE') + " €";
+            document.getElementById('cum-15').innerText = yr15Sum.toLocaleString('de-DE') + " €";
+            document.getElementById('cum-20').innerText = yr20Sum.toLocaleString('de-DE') + " €";
+
+            // Visual bar proportions
+            const limitMax = yr20Sum || 1;
+            document.getElementById('prog-10').style.width = Math.min(100, Math.round((yr10Sum / limitMax) * 100)) + "%";
+            document.getElementById('prog-15').style.width = Math.min(100, Math.round((yr15Sum / limitMax) * 100)) + "%";
+            document.getElementById('prog-20').style.width = "100%";
+        }
+
+        // Submissions handlers
+        function submitConfigurator(event) {
+            event.preventDefault();
+            
+            // Assemble lead object representation
+            const leadData = {
+                id: 'lead_' + Date.now(),
+                segment: document.querySelector('input[name="conf-segment"]:checked').value,
+                houseType: document.getElementById('conf-housetype').value,
+                ownership: document.getElementById('conf-ownership').value,
+                heatingType: document.getElementById('conf-heating').value,
+                wantsSubsidies: document.getElementById('conf-subsidies').value,
+                annualElectricity: document.getElementById('conf-electricity').value,
+                roofSize: document.getElementById('conf-roof').value,
+                budget: document.getElementById('conf-budget').value,
+                hasBattery: document.getElementById('conf-battery-storage').checked,
+                name: document.getElementById('conf-name').value,
+                email: document.getElementById('conf-email').value,
+                phone: document.getElementById('conf-phone').value,
+                zipCode: document.getElementById('conf-zip').value,
+                city: document.getElementById('conf-city').value,
+                createdAt: new Date().toISOString()
+            };
+
+            // Store inside localStorage so they can run fully transparently
+            let currentList = JSON.parse(localStorage.getItem('von_morgen_leads') || '[]');
+            currentList.push(leadData);
+            localStorage.setItem('von_morgen_leads', JSON.stringify(currentList));
+
+            // Custom reload state event
+            window.dispatchEvent(new Event('von_morgen_lead_submitted'));
+
+            // Show feedback
+            document.getElementById('conf-feedback').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('conf-feedback').classList.add('hidden');
+                goToStep(1);
+                document.getElementById('configuratorForm').reset();
+            }, 6000);
+        }
+
+        function submitAppointment(event) {
+            event.preventDefault();
+            document.getElementById('appt-feedback').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('appt-feedback').classList.add('hidden');
+                closeModal('appointment');
+            }, 4000);
+        }
+
+        // Trigger starting calculations on load
+        window.addEventListener('DOMContentLoaded', () => {
+            setCalcProduct('beratung_komplett');
+
+            // Set up IntersectionObserver for premium scroll animation effects
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            const observerOptions = {
+                root: null, // Viewport
+                threshold: 0.1, // Trigger when 10% of element is visible
+                rootMargin: '0px 0px -50px 0px' // Slightly offset trigger to feel more organic
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Unobserve after animating once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+        });
+
+        // --- Advisor Dashboard Backoffice Logic ---
+        let selectedLeadId = null;
+
+        const MOCK_LEADS = [
+            {
+                id: 'lead_seed_1',
+                segment: 'beratung_komplett',
+                houseType: 'einfamilienhaus',
+                ownership: 'eigentuemer',
+                heatingType: 'oel',
+                wantsSubsidies: 'ja',
+                annualElectricity: 6450,
+                roofSize: 85,
+                budget: 35000,
+                hasBattery: true,
+                name: 'Maximilian Schäfer',
+                email: 'm.schaefer@von-morgen.de',
+                phone: '0172 8844910',
+                zipCode: '81675',
+                city: 'München-Bogenhausen',
+                status: 'neu',
+                createdAt: new Date(Date.now() - 3600000 * 2).toISOString(),
+                notes: 'Kunde wünscht Premiummarken (Viessmann und Sig Energy). Telefonisch ab 16 Uhr erreichbar.'
+            },
+            {
+                id: 'lead_seed_2',
+                segment: 'strom_gas',
+                houseType: 'gewerbe',
+                ownership: 'eigentuemer',
+                heatingType: 'gas',
+                wantsSubsidies: 'nein',
+                annualElectricity: 45000,
+                roofSize: 0,
+                budget: 0,
+                hasBattery: false,
+                name: 'Sabine Weber (Weber Consulting)',
+                email: 's.weber@weber-consulting.de',
+                phone: '089 4545892',
+                zipCode: '80331',
+                city: 'München-Zentrum',
+                status: 'kontaktiert',
+                createdAt: new Date(Date.now() - 3600000 * 18).toISOString(),
+                notes: 'Erstes Angebot zur Tarifoptimierung verschickt. Einsparpotential liegt bei ca. 4.200 € pro Jahr.'
+            },
+            {
+                id: 'lead_seed_3',
+                segment: 'immobilien',
+                houseType: 'mehrfamilienhaus',
+                ownership: 'eigentuemer',
+                heatingType: 'gas',
+                wantsSubsidies: 'ja',
+                annualElectricity: 12000,
+                roofSize: 180,
+                budget: 0,
+                hasBattery: false,
+                name: 'Dr. Thomas Keller',
+                email: 'keller.solln@web.de',
+                phone: '0151 4569123',
+                zipCode: '81479',
+                city: 'München-Solln',
+                status: 'berechnung_erstellt',
+                createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
+                notes: 'Objektwertanalyse wurde per Express-Kurier zugestellt. Sanierungskonzept für Heizungsoptimierung liegt vor.'
+            }
+        ];
+
+        // Backoffice & Advisor portal functions have been removed for data privacy and security.
+    </script>
+</body>
+</html>
